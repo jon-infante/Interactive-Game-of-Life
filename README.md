@@ -5,7 +5,7 @@ Remember, life can't live by itself! Interact with past 'life creatures' to see 
 
 Press shift to reset/re-randomize the grid.
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-Jonathan Infante
+Jonathan Infante <br/> 
 5/25/19
 <br/> 
 Make School  repl.it 1.2
