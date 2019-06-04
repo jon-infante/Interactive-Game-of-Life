@@ -1,7 +1,18 @@
+// Resubimitted June 4th. Hey faith or whoever is reading this now. 
+// I am resubmitting this as the dragging function was already working when I
+// submitted it, but you probably mistook it as a pause function because it most
+// likely froze when you tried to drag. 
+// I haven't changed any of the dragging function's code, but I lowered the grid 
+// size so you should experience a lot less lag or potential freezing when
+// attempting to drag your mouse on the grid.
+// Just wanted to fully complete this project and show it was working as intended :p
+
+// [Bonus 2]
+// https://github.com/inv0w/Interactive-Game-of-Life
 var grid;
 var mouseColumn;
 var mouseRow;
-var gridSize = 8;
+var gridSize = 16;
 var alivePressed = false;
 var resetPressed = false;
 
@@ -15,8 +26,9 @@ function setup () {
   print(' > I pushed myself outside of my comfort zone by forcing myself to do things that I dont fully understand yet, and I realize that if I dont learn them now it will be much harder later. Accepting that not everything is going to come naturally all the time is something I still have trouble with sometimes.');
   print(' > I would be happy because it is a small step, but a necessary one to remember that my future successes wont always be so clear during the beginning stages.');
 }
-//[Step 3] Randomizes when you press R.
 
+
+//[Step 3] Randomizes when you press R.
 function keyPressed() {
   if (keyCode === SHIFT) {
     grid.randomize();
@@ -219,4 +231,3 @@ class Grid {
     }
   }
 }
-
