@@ -3,7 +3,7 @@
 var grid;
 var mouseColumn;
 var mouseRow;
-var gridSize = 8;
+var gridSize = 10;
 
 function setup () {
   createCanvas(400, 400);
@@ -51,7 +51,7 @@ function draw () {
   grid.updateNeighborCounts();
   grid.updatePopulation();
   grid.comeAlive(); //[Step 3]
-  grid.draw(gridSize);
+  grid.draw();
     
   //[Step 3] Defining Columns and Rows based off mouse location and grid size
   mouseColumn = floor(mouseX / gridSize);
