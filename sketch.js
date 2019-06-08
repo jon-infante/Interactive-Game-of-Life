@@ -6,7 +6,7 @@ var mouseRow;
 var gridSize = 10;
 
 function setup () {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
    grid = new Grid(gridSize);
    grid.randomize(); //This randomizes the grid. (Was missing this piece in my code for so long and for some reason I just overlooked it in the instructions. Obviouisly this is the basis for how the entire program works, and finally understanding what the problem was really helped me not to skip over any small details looking forward.)
 
