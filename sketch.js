@@ -1,20 +1,9 @@
-// Resubimitted June 4th. Hey faith or whoever is reading this now. 
-// I am resubmitting this as the dragging function was already working when I
-// submitted it, but you probably mistook it as a pause function because it most
-// likely froze when you tried to drag. 
-// I haven't changed any of the dragging function's code, but I lowered the grid 
-// size so you should experience a lot less lag or potential freezing when
-// attempting to drag your mouse on the grid.
-// Just wanted to fully complete this project and show it was working as intended :p
-
 // [Bonus 2]
 // https://github.com/inv0w/Interactive-Game-of-Life
 var grid;
 var mouseColumn;
 var mouseRow;
 var gridSize = 16;
-var alivePressed = false;
-var resetPressed = false;
 
 function setup () {
   createCanvas(400, 400);
@@ -32,9 +21,6 @@ function setup () {
 function keyPressed() {
   if (keyCode === SHIFT) {
     grid.randomize();
-    resetPressed = true;
-  } else  {
-    resetPressed = false;
   }
 }
 
@@ -56,7 +42,7 @@ function mousePressed(){
   print(grid.isValidPosition(0,1));
   grid.updateNeighborCounts();
   grid.updatePopulation();
-  print(grid.cells);
+  //print(grid.cells);
 }
 
 //Draws the cells and updates Population and Neighbor Counts
@@ -160,11 +146,7 @@ class Grid {
   comeAlive(){
   if (mouseIsPressed) {
     var cell = this.cells[mouseColumn][mouseRow];
-        cell.draw();
-        cell.isAlive = true;
-        alivePressed = true;
-  } else {
-      alivePressed = false;
+    cell.isAlive = true;
   }
 }
   //Initial random seed
