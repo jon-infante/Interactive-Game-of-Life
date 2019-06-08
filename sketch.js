@@ -17,7 +17,7 @@ function setup () {
 }
 
 
-//[Step 3] Randomizes when you press R.
+//[Step 3] Randomizes when you press Shift.
 function keyPressed() {
   if (keyCode === SHIFT) {
     grid.randomize();
@@ -56,10 +56,6 @@ function draw () {
   //[Step 3] Defining Columns and Rows based off mouse location and grid size
   mouseColumn = floor(mouseX / gridSize);
   mouseRow = floor(mouseY / gridSize); 
-   if (mouseButton === RIGHT) {
-      grid.randomize();
-    }
-}
  
 class Cell {
   constructor(column, row, size) {
