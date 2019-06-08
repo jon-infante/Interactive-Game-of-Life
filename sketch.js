@@ -3,7 +3,7 @@
 var grid;
 var mouseColumn;
 var mouseRow;
-var gridSize = 8;
+var gridSize = 5;
 
 function setup () {
   createCanvas(400, 400);
