@@ -11,9 +11,9 @@ function setup () {
    grid.randomize(); //This randomizes the grid. (Was missing this piece in my code for so long and for some reason I just overlooked it in the instructions. Obviouisly this is the basis for how the entire program works, and finally understanding what the problem was really helped me not to skip over any small details looking forward.)
 
    // Step 4
-  print(' > The most challenging part of one of my customizations was the dragging function. As I"m typing this response up at the top I dont even have it completed but I am determined to make it work.');
-  print(' > I pushed myself outside of my comfort zone by forcing myself to do things that I dont fully understand yet, and I realize that if I dont learn them now it will be much harder later. Accepting that not everything is going to come naturally all the time is something I still have trouble with sometimes.');
-  print(' > I would be happy because it is a small step, but a necessary one to remember that my future successes wont always be so clear during the beginning stages.');
+  //print(' > The most challenging part of one of my customizations was the dragging function. As I"m typing this response up at the top I dont even have it completed but I am determined to make it work.');
+  //print(' > I pushed myself outside of my comfort zone by forcing myself to do things that I dont fully understand yet, and I realize that if I dont learn them now it will be much harder later. Accepting that not everything is going to come naturally all the time is something I still have trouble with sometimes.');
+  //print(' > I would be happy because it is a small step, but a necessary one to remember that my future successes wont always be so clear during the beginning stages.');
 }
 
 
@@ -34,12 +34,12 @@ function mousePressed(){
   var randomCell = grid.cells[randomColumn][randomRow];
   var neighborCount = grid.getNeighbors(randomCell).length;
   
-  print("cell at " + randomCell.column + ", " + randomCell.row + " has " + neighborCount + " neighbors");
-  print(grid.isValidPosition(0, 0)); // Is true
-  print(grid.isValidPosition(-1, -1)); // Is False
+  //print("cell at " + randomCell.column + ", " + randomCell.row + " has " + neighborCount + " neighbors");
+  //print(grid.isValidPosition(0, 0)); // Is true
+  //print(grid.isValidPosition(-1, -1)); // Is False
  
   // Add an example for all of the possible ways that it should return false
-  print(grid.isValidPosition(0,1));
+  //print(grid.isValidPosition(0,1));
   grid.updateNeighborCounts();
   grid.updatePopulation();
   //print(grid.cells);
