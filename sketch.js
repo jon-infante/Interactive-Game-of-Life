@@ -3,7 +3,8 @@
 var grid;
 var mouseColumn;
 var mouseRow;
-var gridSize = 8;
+var gridSize = 16;
+var resetPressed = false;
 
 function setup () {
   createCanvas(400, 400);
@@ -17,10 +18,13 @@ function setup () {
 }
 
 
-//[Step 3] Randomizes when you press Shift.
+//[Step 3] Randomizes when you press R.
 function keyPressed() {
   if (keyCode === SHIFT) {
     grid.randomize();
+    resetPressed = true;
+  } else  {
+    resetPressed = false;
   }
 }
 
@@ -56,7 +60,7 @@ function draw () {
   //[Step 3] Defining Columns and Rows based off mouse location and grid size
   mouseColumn = floor(mouseX / gridSize);
   mouseRow = floor(mouseY / gridSize); 
- 
+
 class Cell {
   constructor(column, row, size) {
     this.column = column;
@@ -142,7 +146,7 @@ class Grid {
   comeAlive(){
   if (mouseIsPressed) {
     var cell = this.cells[mouseColumn][mouseRow];
-    cell.isAlive = true;
+        cell.isAlive = true;
   }
 }
   //Initial random seed
@@ -209,3 +213,4 @@ class Grid {
     }
   }
 }
+
