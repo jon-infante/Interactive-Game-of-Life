@@ -56,6 +56,10 @@ function draw () {
   //[Step 3] Defining Columns and Rows based off mouse location and grid size
   mouseColumn = floor(mouseX / gridSize);
   mouseRow = floor(mouseY / gridSize); 
+   if (mouseButton === RIGHT) {
+      grid.randomize();
+    }
+}
  
 class Cell {
   constructor(column, row, size) {
