@@ -51,7 +51,7 @@ function draw () {
   grid.updateNeighborCounts();
   grid.updatePopulation();
   grid.comeAlive(); //[Step 3]
-  grid.draw();
+  grid.draw(gridSize);
     
   //[Step 3] Defining Columns and Rows based off mouse location and grid size
   mouseColumn = floor(mouseX / gridSize);
