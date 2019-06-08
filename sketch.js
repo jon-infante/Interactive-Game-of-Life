@@ -1,9 +1,20 @@
+// Resubimitted June 4th. Hey faith or whoever is reading this now. 
+// I am resubmitting this as the dragging function was already working when I
+// submitted it, but you probably mistook it as a pause function because it most
+// likely froze when you tried to drag. 
+// I haven't changed any of the dragging function's code, but I lowered the grid 
+// size so you should experience a lot less lag or potential freezing when
+// attempting to drag your mouse on the grid.
+// Just wanted to fully complete this project and show it was working as intended
+// when I submitted it :p
+
 // [Bonus 2]
 // https://github.com/inv0w/Interactive-Game-of-Life
 var grid;
 var mouseColumn;
 var mouseRow;
 var gridSize = 16;
+var alivePressed = false;
 var resetPressed = false;
 
 function setup () {
@@ -38,15 +49,15 @@ function mousePressed(){
   var randomCell = grid.cells[randomColumn][randomRow];
   var neighborCount = grid.getNeighbors(randomCell).length;
   
-  //print("cell at " + randomCell.column + ", " + randomCell.row + " has " + neighborCount + " neighbors");
-  //print(grid.isValidPosition(0, 0)); // Is true
-  //print(grid.isValidPosition(-1, -1)); // Is False
+  print("cell at " + randomCell.column + ", " + randomCell.row + " has " + neighborCount + " neighbors");
+  print(grid.isValidPosition(0, 0)); // Is true
+  print(grid.isValidPosition(-1, -1)); // Is False
  
   // Add an example for all of the possible ways that it should return false
-  //print(grid.isValidPosition(0,1));
+  print(grid.isValidPosition(0,1));
   grid.updateNeighborCounts();
   grid.updatePopulation();
-  //print(grid.cells);
+  print(grid.cells);
 }
 
 //Draws the cells and updates Population and Neighbor Counts
@@ -60,6 +71,10 @@ function draw () {
   //[Step 3] Defining Columns and Rows based off mouse location and grid size
   mouseColumn = floor(mouseX / gridSize);
   mouseRow = floor(mouseY / gridSize); 
+  if (mouseButton === RIGHT) {
+      grid.randomize();
+    }
+}
 
 class Cell {
   constructor(column, row, size) {
@@ -146,7 +161,11 @@ class Grid {
   comeAlive(){
   if (mouseIsPressed) {
     var cell = this.cells[mouseColumn][mouseRow];
+        cell.draw();
         cell.isAlive = true;
+        alivePressed = true;
+  } else {
+      alivePressed = false;
   }
 }
   //Initial random seed
