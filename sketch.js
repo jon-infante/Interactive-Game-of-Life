@@ -146,7 +146,7 @@ class Grid {
   comeAlive(){
   if (mouseIsPressed) {
     var cell = this.cells[mouseColumn][mouseRow];
-    this.isAlive = true;
+    cell.isAlive = true;
   } 
 }
   //Initial random seed
