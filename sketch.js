@@ -25,9 +25,6 @@ function keyPressed() {
 }
 
 function mousePressed(){
-  //  grid.randomize(); //Randomizes the grid when the mouse is pressed (Wasn't sure to leave this enabled before submitting. I always kept it enabled as I liked re-randomizing the grid mid code.) 
-// I guess looking back this is one of the two challeneges haha. 
-// Pressing down the middle mouse button will now re-randomize instead.
 
   var randomColumn = floor(random(grid.numberOfColumns));
   var randomRow = floor(random(grid.numberOfRows));
