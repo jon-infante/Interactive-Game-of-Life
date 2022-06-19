@@ -4,7 +4,7 @@ var grid;
 var mouseColumn;
 var mouseRow;
 var gridSize = 10;
-
+//Called immediately during instantation
 function setup () {
   createCanvas(500, 500);
    grid = new Grid(gridSize);
@@ -117,7 +117,7 @@ class Grid {
     this.numberOfRows = height/cellSize;
     this.numberOfColumns = width/cellSize;
     
-    //defines a new array
+    //defines a new array of cells
     var cells;
     this.cells = new Array(this.numberOfColumns);
     for (var i = 0; i < this.numberOfColumns; i ++) {
